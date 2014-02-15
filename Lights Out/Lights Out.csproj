@@ -156,6 +156,7 @@
     <Content Include="Images\no1.png" />
     <Content Include="Images\sfondo2.png" />
     <Content Include="Images\sfondo3.png" />
+    <Content Include="sfondoPop.png" />
     <Content Include="Images\unlocked_1.png" />
     <Content Include="Images\unlocked_10.png" />
     <Content Include="Images\unlocked_11.png" />

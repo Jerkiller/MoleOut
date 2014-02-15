@@ -141,8 +141,8 @@ namespace PhoneApp1
 
 
         /// METODO: che cambia stato alla scacchiera a seconda della selezione
-        public void Mossa(int id) {
-            
+        public void Mossa(Cella c) {
+            int id = c.Id;
             ///PRIMA COLONNA
             if (id%5 == 0) 
             {

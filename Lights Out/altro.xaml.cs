@@ -24,17 +24,21 @@ namespace Lights_Out
 
         private void resetGame_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            for (int i = 0; i < 20; i++)
+            MessageBoxResult m = MessageBox.Show("Resettare tutti i dati di gioco?", "Cancella", MessageBoxButton.OKCancel);
+            if (m == MessageBoxResult.OK)
             {
-                if (appSettings.Contains("bestscore" + i))
-                { appSettings["bestscore" + i] = "-"; }
+                for (int i = 0; i < 20; i++)
+                {
+                    if (appSettings.Contains("bestscore" + i))
+                    { appSettings["bestscore" + i] = "-"; }
+                }
+                if (appSettings.Contains("mossetotali"))
+                { appSettings["mossetotali"] = "0"; }
+                mossefatte.Text = "0";
+
+
+                MessageBox.Show("Tutti i progressi nel gioco sono stati cancellati.");
             }
-            if (appSettings.Contains("mossetotali"))
-            { appSettings["mossetotali"] = "0"; }
-            mossefatte.Text = "0";
-
-
-            MessageBox.Show("Tutti i progressi nel gioco sono stati cancellati.");
         }
     }
 }

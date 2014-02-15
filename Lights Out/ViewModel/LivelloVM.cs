@@ -146,9 +146,8 @@ namespace Lights_Out.ViewModel
         /// METODO: Chiama la Mossa(cellaselezionata) sulla cella && Controlla se il livello è completo && Salva best score
         public bool Move(Cella c)
         {
-            int CodCella=c.Id;
             /// muovo sulla cella selezionata
-            this.livAttuale.Mossa(CodCella);
+            this.livAttuale.Mossa(c);
             
             // aumenta il numero di mosse
             this.addMossa();

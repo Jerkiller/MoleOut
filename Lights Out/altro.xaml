@@ -31,13 +31,22 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Button BorderBrush="White" Foreground="White" Name="resetGame" Content="Ricomincia Gioco" Margin="12,337,0,0" VerticalAlignment="Top" Height="136" FontSize="35" Click="resetGame_Click"/>
-            <TextBlock Foreground="White" Text="Come giocare?" Margin="10,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" FontSize="25" FontWeight="Bold" />
-            <TextBlock Foreground="White" Text="Mosse fatte: " Margin="12,247,334,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-            <TextBlock Foreground="White" Name="mossefatte" Margin="127,247,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="27"/>
-            <TextBlock Foreground="White" Text="L'obbiettivo del gioco è di rimuovere tutte le talpe da tutti i livelli, premendo su una talpa (o un buco) si cambierà lo stato della cella premuta e delle 4 adiacenti, come nel celebre gioco &quot;Lights Out&quot;." Margin="12,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-            <TextBlock Foreground="White" Margin="12,185,10,0" TextWrapping="Wrap" Text="Si possono sbloccare i livelli successivi solo vincendo i livelli precedenti." VerticalAlignment="Top"/>
+            <StackPanel>
+                <TextBlock Foreground="White" Text="Come giocare?" Margin="10,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" FontSize="25" FontWeight="Bold" />
 
+                <TextBlock Foreground="White" Text="L'obbiettivo del gioco è di rimuovere tutte le talpe da tutti i livelli, premendo su una talpa (o un buco) si cambierà lo stato della cella premuta e delle 4 adiacenti (sopra, sotto, destra e sinistra)." Margin="12,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBlock Foreground="White" Margin="12,30,10,0" TextWrapping="Wrap" Text="Per sbloccare un livello è necessario termiare il precedente." VerticalAlignment="Top"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+
+                    </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Foreground="White" Text="Mosse fatte: " Margin="12,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <TextBlock Grid.Column="1" FontSize="25" FontWeight="Bold"  Foreground="White" Name="mossefatte" Margin="127,30,0,0" TextWrapping="Wrap" HorizontalAlignment="left"/>
+                </Grid>
+                <Button BorderBrush="White" Foreground="White" Name="resetGame" Content="Ricomincia Gioco" Margin="12,40,0,0" VerticalAlignment="Top" Height="136" FontSize="35" Click="resetGame_Click"/>
+           </StackPanel>
         </Grid>
     </Grid>
 
