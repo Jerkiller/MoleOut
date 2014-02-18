@@ -135,7 +135,7 @@
 			</Button>
             
 			<Button x:Name="Altro" 
-				Content="Altro" 
+				Content="Tutorial" 
 				BorderThickness="0" 
 				Background="Transparent"   
 				Grid.Row="2" 
@@ -143,33 +143,16 @@
                 FontFamily="/Lights Out;component/Fonts/Fonts.zip#Buxton Sketch"
 				FontSize="66.667" Click="Altro_Click"/>
 
-            <Grid Grid.Row="3">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="5*"/>
-                    <ColumnDefinition Width="4*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock Text="Audio"
-				Grid.Column="0" 
+            <Button x:Name="Impostazioni" 
+				Content="Impostazioni" 
+				BorderThickness="0" 
+				Background="Transparent"   
+				Grid.Row="3" 
 				Foreground="White"
                 FontFamily="/Lights Out;component/Fonts/Fonts.zip#Buxton Sketch"
-				FontSize="50"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Right" />
-            <CheckBox
-                Name="AudioCheckBox"
-                Grid.Column="1"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Left"
-                Width="80" Height="80"
-                FontSize="40"
-                BorderThickness="5,3,3,3"
-                Background="#BF35C909"
-                Foreground="#FF004400"
-                Checked="Audio"
-                Unchecked="NoAudio" />
-            </Grid>
-            
-            </Grid>
+				FontSize="66.667" Click="Impostazioni_Click"/>
+
+        </Grid>
 
 
 

@@ -73,6 +73,9 @@
     <Compile Include="Game.xaml.cs">
       <DependentUpon>Game.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Impostazioni.xaml.cs">
+      <DependentUpon>Impostazioni.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Info.xaml.cs">
       <DependentUpon>Info.xaml</DependentUpon>
     </Compile>
@@ -100,6 +103,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Game.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Impostazioni.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -131,6 +138,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="dll\Microsoft.Phone.Controls.Toolkit.dll" />
+    <Content Include="Images\destroy.png" />
+    <Content Include="Images\destroy2.png" />
     <Content Include="Images\locked_10.png" />
     <Content Include="Images\locked_11.png" />
     <Content Include="Images\locked_12.png" />
@@ -154,6 +163,8 @@
     <Content Include="Images\mole_out.png" />
     <Content Include="Images\mole_question.png" />
     <Content Include="Images\no1.png" />
+    <Content Include="Images\screenMole.png" />
+    <Content Include="Images\screenMole2.png" />
     <Content Include="Images\sfondo2.png" />
     <Content Include="Images\sfondo3.png" />
     <Content Include="sfondoPop.png" />

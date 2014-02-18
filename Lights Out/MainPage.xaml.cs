@@ -22,21 +22,12 @@ namespace Lights_Out
     /// CLASS: classe parziale di inizio merged con il file xaml parsato
     public partial class MainPage : PhoneApplicationPage
     {
-        private bool audio = false;
-        private IsolatedStorageSettings appSettings = IsolatedStorageSettings.ApplicationSettings;
 
         /// COSTRUTTORE
         public MainPage()
         {
             InitializeComponent();
             
-        }
-
-        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
-        {
-            bool ischecked = false;
-            if (appSettings.Contains("audio"))ischecked = (bool)appSettings["audio"];
-            AudioCheckBox.IsChecked = ischecked;
         }
 
         /// METODO: richiamato dal bottone inizia
@@ -66,40 +57,12 @@ namespace Lights_Out
             NavigationService.Navigate(new Uri("/altro.xaml", UriKind.Relative));
         }
 
-        private void Audio(object sender, RoutedEventArgs e)
+        private void Impostazioni_Click(object sender, RoutedEventArgs e)
         {
-            if (!audio)
-            {
-                audio = true;
-                if (appSettings.Contains("audio"))
-                    {
-                        appSettings.Remove("audio");
-                        appSettings.Add("audio", true);
-                    }
-                else appSettings.Add("audio", true);
-            }
-            else {
-                throw new Exception("Audio settato male");
-            }
+            NavigationService.Navigate(new Uri("/Impostazioni.xaml", UriKind.Relative));
         }
 
-        private void NoAudio(object sender, RoutedEventArgs e)
-        {
-            if (audio)
-            {
-                audio = false;
-                if (appSettings.Contains("audio"))
-                {
-                    appSettings.Remove("audio");
-                    appSettings.Add("audio", false);
-                }
-                else appSettings.Add("audio", false);
-            }
-            else
-            {
-                throw new Exception("Audio settato male");
-            }
-        }
+       
 
        
     }
