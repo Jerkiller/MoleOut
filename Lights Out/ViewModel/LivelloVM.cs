@@ -39,7 +39,26 @@ namespace Lights_Out.ViewModel
             set {
                 if (value != vittoria) {
                     vittoria = value;
+                    if (vittoria == true)
+                        Campo = "Collapsed";
                     RaisePropertyChanged("Vittoria");
+                }
+            }
+        }
+
+        private string campo;
+        public string Campo
+        {
+            get
+            {
+                return campo;
+            }
+            set
+            {
+                if (value != campo)
+                {
+                    campo = value;
+                    RaisePropertyChanged("Campo");
                 }
             }
         }
@@ -79,6 +98,7 @@ namespace Lights_Out.ViewModel
             livelloSuccessivo = new DelegateCommand(_livelloSuccessivo);
             eseguiMossa = new DelegateCommand(_eseguiMossa);
             vittoria = false;
+            campo = "Visible";
         }
 
         // eventi da lanciare per il play dei suoni (ascoltati poi nella view)

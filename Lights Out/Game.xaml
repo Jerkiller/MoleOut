@@ -111,10 +111,7 @@
         </StackPanel>
 
         <Popup x:Name="vittoria" Grid.Row="1" IsOpen="{Binding Vittoria}" Margin="0,0,0,0">
-                <StackPanel Height="490" Width="480">
-                	<StackPanel.Background>
-                		<ImageBrush Stretch="Fill" ImageSource="sfondoPop.png"/>
-                	</StackPanel.Background>             
+                <StackPanel Height="490" Width="480">            
                     <Image Margin="0 10 0 20" Grid.Row="0" Source="/Images/vittoria.png" HorizontalAlignment="Center" Stretch="Uniform" Width="250" />
                     <TextBlock Foreground="White" Grid.Row="1" Text="Hai Vinto" TextAlignment="Center" FontSize="53.333" FontFamily="/Lights Out;component/Fonts/Fonts.zip#Buxton Sketch" Margin="10,0" />
                     <Button Foreground="White" Grid.Row="2" x:Name="btn_continue"  Content="Continua" FontFamily="/Lights Out;component/Fonts/Fonts.zip#Buxton Sketch" Command="{Binding LivelloSuccessivo}" Height="105" Margin="105,0" BorderThickness="3" FontSize="33.333" BorderBrush="White"/>
@@ -142,7 +139,7 @@
 
 
         <!-- CAMPO DI GIOCO-->
-        <StackPanel Grid.Row="1">
+        <StackPanel x:Name="CampoGioco" Grid.Row="1" Visibility="{Binding Campo}">
             
             <!-- GRIGLIA -->
             <ListBox ItemsSource="{Binding Celle}" ScrollViewer.VerticalScrollBarVisibility="Disabled">

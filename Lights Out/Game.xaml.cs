@@ -120,6 +120,7 @@ namespace Lights_Out
             }
             else
             {
+                ((LivelloVM)this.DataContext).Campo = "Collapsed";
                 torna.IsOpen = true; 
                 e.Cancel = true;
             }
@@ -128,6 +129,9 @@ namespace Lights_Out
         private void continua(object sender, RoutedEventArgs e)
         {
             torna.IsOpen = false;
+            ((LivelloVM)this.DataContext).Campo = "Visible";
+
+
         }
 
 
